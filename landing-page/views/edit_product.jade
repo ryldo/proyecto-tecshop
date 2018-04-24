@@ -1,0 +1,22 @@
+html
+    head
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title Sistema
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    body
+        .main-container
+            .row
+                .col-md-6.col-md-offset-3
+                    h1.display-4.m-b-2 Editar producto
+                    form(action="/producto/update", method="post")
+                        input(type="hidden", name="_id" value= producto._id)
+                        div.form-group
+                            label(for="nombre") Nombre:
+                            input#nombre.form-control(type="text" name="nombre" value= producto.nombre )
+                        div.form-group
+                            label(for="descripcion") Descripción:
+                            input#descripcion.form-control(type="text" name="descripcion" value= producto.descripcion )
+                        div.form-group
+                            label(for="precio") Precio:
+                            input#precio.form-control(type="text" name="precio" value= producto.precio )
+                        button.btn.btn-success(type="submit") Grabar

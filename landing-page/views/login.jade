@@ -1,0 +1,15 @@
+html
+    head
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title Sistema
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    body
+        block content   
+            .container
+                if message
+                    p= message 
+                form.form-signin(action="/login", method='post')
+                    h2.form-signin-heading Ingrese sus datos
+                    input.input.block-level(type="text" name="usuario" placeholder="Usuario")                    
+                    input.input.block-level(type="password" name="password" placeholder="Contraseña")
+                    button.btn.btn-large.btn-success(type="submit") Iniciar Sesión
